@@ -3,7 +3,7 @@
 MENU: [**USER STORY**](#user-story) \| [**QUICK DEPLOY**](#quick-deploy) \| [**SUPPORTING DOCUMENTS**](#supporting-documents)
 
 <p align="left">
-  <img src="Deployment/Images/userstory.png" alt="User Story" width="50">
+  <img src="Deployment/Images/userStory.png" alt="User Story" width="50">
 </p>
 
 # User Story
@@ -38,7 +38,7 @@ Below is a sample landing page of the solution accelerator after it is deployed,
 An employee wants to initiate a request for contract creation which is to be sent to a customer for esignature. The employee chats with the Contract Assistant agent in Teams who helps the employee confirm if a contract exists for the customer. If not, the agent initiates the contract creation by asking for all the needed fields. Once the field information is provided, the agent automatically creates a draft version of the contract and presents it to the employee to confirm if it's ready to be sent for esignature. Once the employee looks over the draft and is good to go, the agent sends the contract to the customer for the esignature. Once the signature is completed, the signed document is stored in Sharepoint and a dataverse record is created which stores the status, sharepoint URL, agreement ID and other important details of the NDA Agreement.
 
 <p align="left">
-  <img src="Deployment/Images/quickdeploy.png" alt="Quick Deploy" width="50">
+  <img src="Deployment/Images/quickDeploy.png" alt="Quick Deploy" width="50">
 </p>
 
 # Quick Deploy
