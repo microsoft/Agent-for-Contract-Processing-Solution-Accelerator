@@ -3,14 +3,14 @@
 MENU: [**USER STORY**](#user-story) \| [**QUICK DEPLOY**](#quick-deploy) \| [**SUPPORTING DOCUMENTS**](#supporting-documents)
 
 <p align="left">
-  <img src="./Deployment/Images/userstory.png" alt="User Story" width="50">
+  <img src="Deployment/Images/userstory.png" alt="User Story" width="50">
 </p>
 
 # User Story
 
 ## Solution Overview
 
-The Contract Assistant copilot agent helps employees quickly create, find, manage and share contracts, saving time and resources by automating contract processing workflows. 
+The Contract Assistant copilot agent helps employees quickly create, find, manage and share contracts, saving time and resources by automating contract processing workflows.
 
 Leveraging Copilot Studio, Power Platform, Microsoft Teams, SharePoint and 3rd party e-signature tools, employees can generate, search & summarize contracts, automate e-sign processes with customers and converse naturally to the agent.
 
@@ -27,7 +27,6 @@ This accelerator focuses on harnessing the following key capabilities:
 * [Configure tables in Dataverse](https://learn.microsoft.com/en-us/training/modules/get-started-with-powerapps-common-data-service/)
 * [Using SharePoint library for document storage](https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-0325-4b28-b60d-f902e1d75939)
 
-
 ![Key Features](./Deployment/Images/keyfeatures.png)
 
 Below is a sample landing page of the solution accelerator after it is deployed, set up, and ready to be used:
@@ -39,7 +38,7 @@ Below is a sample landing page of the solution accelerator after it is deployed,
 An employee wants to initiate a request for contract creation which is to be sent to a customer for esignature. The employee chats with the Contract Assistant agent in Teams who helps the employee confirm if a contract exists for the customer. If not, the agent initiates the contract creation by asking for all the needed fields. Once the field information is provided, the agent automatically creates a draft version of the contract and presents it to the employee to confirm if it's ready to be sent for esignature. Once the employee looks over the draft and is good to go, the agent sends the contract to the customer for the esignature. Once the signature is completed, the signed document is stored in Sharepoint and a dataverse record is created which stores the status, sharepoint URL, agreement ID and other important details of the NDA Agreement.
 
 <p align="left">
-  <img src="./Deployment/Images/quickdeploy.png" alt="Quick Deploy" width="50">
+  <img src="Deployment/Images/quickdeploy.png" alt="Quick Deploy" width="50">
 </p>
 
 # Quick Deploy
@@ -53,7 +52,7 @@ Please click this [**Link to Deployment Guide**](Deployment/README.md) for instr
 ![architecture](./Deployment/Images/architecture.png)
 
 <p align="left">
-  <img src="./Deployment/Images/supportingDocuments.png" alt="Supporting Documents" width="50">
+  <img src="Deployment/Images/supportingDocuments.png" alt="Supporting Documents" width="50">
 </p>
 
 # Supporting Documents
