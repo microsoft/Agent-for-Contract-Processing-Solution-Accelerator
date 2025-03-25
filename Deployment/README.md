@@ -89,7 +89,7 @@ There are six Power Automate flows in this solution. Some of those will need to 
 3. For all the subsequent Docusign actions, please make sure **Account** in all actions has your account selected. This should be taken care of by default during **step 3.1.3**, but please check to confirm.
 4. **Save** the flow.
 
-### Step 3.3.2 Docusign post signing flow
+### Step 3.3.3 Docusign post signing flow
 
 1. Open the **Docusign post signing** flow in **Edit mode.**
 2. For all the Docusign actions, please make sure **Account** in all actions is has your account selected. This should be taken care of by default during **step 3.1.3**, but please check to confirm.
@@ -97,11 +97,11 @@ There are six Power Automate flows in this solution. Some of those will need to 
 4. In the SharePoint **Get File** Properties action, select site address to be the SharePoint site from **Step 1.1** and **library name** to be the document library created in **Step 1.2.5.**
 5. **Save** the flow.
 
-### Step 3.3.3 Ensure flows are turned on
+### Step 3.3.4 Ensure flows are turned on
 
 Ensure all included flows are turned on. When viewing the list of flows included with the solution, the **Status** column will indicate whether each is On or Off. By selecting any flow, you will be able to turn it on by selecting **Turn On** in the top menu.
 
-### Step 3.3.4 Managing authentication for actions and flows (optional)
+### Step 3.3.5 Managing authentication for actions and flows (optional)
 
 You will want to ensure that you configure any Copilot Studio actions, and any Connections used in Power Automate flows, to use the authentication that is appropriate for your organization and scenario.
 
