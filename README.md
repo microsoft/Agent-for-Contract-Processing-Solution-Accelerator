@@ -3,7 +3,7 @@
 MENU: [**USER STORY**](#user-story) \| [**QUICK DEPLOY**](#quick-deploy) \| [**SUPPORTING DOCUMENTS**](#supporting-documents)
 
 <p align="left">
-  <img src="./Deployment/Images/userstory.png" alt="User Story" width="50">
+  <img src="./Deployment/Images/userStory.png" alt="User Story" width="50">
 </p>
 
 # User Story
@@ -48,7 +48,7 @@ An employee wants to initiate a request for contract creation (a Non-disclosure 
 By being able to get an executed NDA agreement in place quickly and seamlessly, and without involving in-house legal resources, the employee is able to proceed with their sales opportunity quickly, and the employee's legal department is able to focus on higher-value legal scenarios rather than repetitive tasks.
 
 <p align="left">
-  <img src="./Deployment/Images/quickdeploy.png" alt="Quick Deploy" width="50">
+  <img src="./Deployment/Images/quickDeploy.png" alt="Quick Deploy" width="50">
 </p>
 
 # Quick Deploy
