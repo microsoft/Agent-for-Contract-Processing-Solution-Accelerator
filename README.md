@@ -27,6 +27,13 @@ This accelerator focuses on harnessing the following key capabilities:
 * [Configure tables in Dataverse](https://learn.microsoft.com/en-us/training/modules/get-started-with-powerapps-common-data-service/)
 * [Using SharePoint library for document storage](https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-0325-4b28-b60d-f902e1d75939)
 
+Additional details on how these capabilities are leveraged in this accelerator can be found here:
+
+* [Dynamically-generated Adaptive Cards in Topics](./Deployment/Differentiators/DIFFERENTIATORS.md#adaptive_cards)
+* [Use of entities and slot filling](./Deployment/Differentiators/DIFFERENTIATORS.md#slot_filling)
+* [Modular topics with inputs and outputs](./Deployment/Differentiators/DIFFERENTIATORS.md#modular_topics)
+* [Document manipulation](./Deployment/Differentiators/DIFFERENTIATORS.md#document_manipulation)
+* [E-signature connector usage](./Deployment/Differentiators/DIFFERENTIATORS.md#esignature)
 
 ![Key Features](./Deployment/Images/keyfeatures.png)
 

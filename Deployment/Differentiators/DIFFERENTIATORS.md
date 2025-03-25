@@ -8,7 +8,7 @@ There are several capabilities that were focused on as key differentiators for t
 * [Document manipulation](#document_manipulation)
 * [E-signature connector usage](#esignature)
 
- `<a id="adaptive_cards"></a>`
+ <a id="adaptive_cards"></a>
 
 ## Dynamically-generated Adaptive Cards in Topics and Actions
 
@@ -36,7 +36,7 @@ In this instance, a flow named **Find existing NDAs by account id** returns a st
 
 You can find the full Power FX formula for rendering this Adaptive Card [here](../AdaptiveCards_PowerFXFormulas/AgreementsAdaptiveCard.txt), and you can find all other formulas used in this accelerator in the [AdaptiveCards_PowerFXFormulas](../AdaptiveCards_PowerFXFormulas/) folder.
 
- `<a id="slot_filling"></a>`
+ <a id="slot_filling"></a>
 
 ## Use of entities and slot filling
 
@@ -55,7 +55,7 @@ This is facilitated by having a question node in which the response is identifie
 
 ![Entities and Slot filling](../Images/entities.png)
 
- `<a id="modular_topics"></a>`
+ <a id="modular_topics"></a>
 
 ## Modular topics with inputs and outputs
 
@@ -71,7 +71,7 @@ As a result, it has been created as a modular topic that is invoked **On redirec
 
 ![Modular Topics](../Images/modular.png)
 
- `<a id="document_manipulation"></a>`
+ <a id="document_manipulation"></a>
 
 ## Document manipulation
 
@@ -89,7 +89,7 @@ The Power Automate flow takes the following steps:
 
  ![Document Manipulation](../Images/docmanipulation.png)
 
- `<a id="esignature"></a>`
+ <a id="esignature"></a>
 
 ## E-signature connector usage
 
