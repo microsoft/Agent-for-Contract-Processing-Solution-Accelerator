@@ -3,29 +3,30 @@
 MENU: [**USER STORY**](#user-story) \| [**QUICK DEPLOY**](#quick-deploy) \| [**SUPPORTING DOCUMENTS**](#supporting-documents)
 
 <p align="left">
-  <img src="Deployment/Images/userStory.png" alt="User Story" width="50">
+  <img src="./Deployment/Images/userstory.png" alt="User Story" width="50">
 </p>
 
 # User Story
 
 ## Solution Overview
 
-The Contract Assistant copilot agent helps employees quickly create, find, manage and share contracts, saving time and resources by automating contract processing workflows.
+The Contract Assistant copilot agent helps employees quickly create, find, manage and share contracts, saving time and resources by automating contract processing workflows. 
 
-Leveraging Copilot Studio, Power Platform, Microsoft Teams, SharePoint and 3rd party e-signature tools, employees can generate, search & summarize contracts, automate e-sign processes with customers and converse naturally to the agent.
+Leveraging Copilot Studio, Power Platform, Microsoft Teams, SharePoint and 3rd party e-signature tools, employees can generate, search and summarize contracts, automate e-sign processes with customers and converse naturally with the agent.
 
-**Note:** This accelerator is not intended to be a production ready solution. The components can be extended through customization & configuration as desired to create a production ready solution. All components packaged have been done through a unmanaged solution which allows users to be able to customize & extend the components post deployment.
+**Note:** This accelerator is not intended to be a production ready solution. The components can be extended through customization and configuration as desired to create a production ready solution. All components packaged have been done through an unmanaged solution, which allows users to be able to customize and extend the components post-deployment.
 
 ## Key features
 
 This accelerator focuses on harnessing the following key capabilities:
 
-* User intent detection in Copilot Studio.
+* [User intent detection in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/cux-identify-intents)
 * [Adaptive Cards in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/adaptive-cards-overview)
 * [Publishing Copilot agent in Microsoft Teams](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams)
 * [Capturing e-signatures using DocuSign](https://learn.microsoft.com/en-us/connectors/docusign/)
 * [Configure tables in Dataverse](https://learn.microsoft.com/en-us/training/modules/get-started-with-powerapps-common-data-service/)
 * [Using SharePoint library for document storage](https://support.microsoft.com/en-us/office/create-a-document-library-in-sharepoint-306728fe-0325-4b28-b60d-f902e1d75939)
+
 
 ![Key Features](./Deployment/Images/keyfeatures.png)
 
@@ -35,10 +36,12 @@ Below is a sample landing page of the solution accelerator after it is deployed,
 
 ## Scenario
 
-An employee wants to initiate a request for contract creation which is to be sent to a customer for esignature. The employee chats with the Contract Assistant agent in Teams who helps the employee confirm if a contract exists for the customer. If not, the agent initiates the contract creation by asking for all the needed fields. Once the field information is provided, the agent automatically creates a draft version of the contract and presents it to the employee to confirm if it's ready to be sent for esignature. Once the employee looks over the draft and is good to go, the agent sends the contract to the customer for the esignature. Once the signature is completed, the signed document is stored in Sharepoint and a dataverse record is created which stores the status, sharepoint URL, agreement ID and other important details of the NDA Agreement.
+An employee wants to initiate a request for contract creation (a Non-disclosure Agreement with a customer, or NDA in this example) to allow them to proceed with their sales opportunity with a second party organization. The employee chats with the Contract Assistant agent in Teams, which helps the employee confirm whether or not an NDA contract already exists for the customer. If not, the agent initiates the contract creation by requesting all required information from the employee. Once the information is provided, the agent automatically creates a draft version of the contract and presents it to the employee to confirm if it's ready to be sent to the customer for eSignature. Once the employee reviews the draft and is satisfied, the agent sends the contract to the customer for the eSignature. Once the eSignature process is completed, the signed document is stored in SharePoint, and a Dataverse record is created which stores the status, SharePoint URL, agreement ID and other important details of the NDA Agreement.
+
+By being able to get an executed NDA agreement in place quickly and seamlessly, and without involving in-house legal resources, the employee is able to proceed with their sales opportunity quickly, and the employee's legal department is able to focus on higher-value legal scenarios rather than repetitive tasks.
 
 <p align="left">
-  <img src="Deployment/Images/quickDeploy.png" alt="Quick Deploy" width="50">
+  <img src="./Deployment/Images/quickdeploy.png" alt="Quick Deploy" width="50">
 </p>
 
 # Quick Deploy
@@ -49,10 +52,10 @@ Please click this [**Link to Deployment Guide**](Deployment/README.md) for instr
 
 ## Solution Accelerator Architecture
 
-![architecture](./Deployment/Images/architecture.png)
+![Architecture](./Deployment/Images/architecture.png)
 
 <p align="left">
-  <img src="Deployment/Images/supportingDocuments.png" alt="Supporting Documents" width="50">
+  <img src="./Deployment/Images/supportingDocuments.png" alt="Supporting Documents" width="50">
 </p>
 
 # Supporting Documents
@@ -60,6 +63,21 @@ Please click this [**Link to Deployment Guide**](Deployment/README.md) for instr
 ## How to customize
 
 This solution is designed to be easily customizable. All configuration and customizations to this solution will be done in Power Platform and Copilot Studio.
+
+### A note on extension opportunities with Conversation Start Adaptive Card
+
+Note that in the initial Adaptive Card that presents three options (Check if a customer has an NDA; Get information about an NDA; Create a new NDA), the first two options both currently initiate a search for existing NDAs in place for a given organization. As an extension, you may choose to include additional functionality for the second of these options, to provide additional summarization information about the agreement, beyond what is included in the Adaptive Card summary.
+
+### Additional opportunities for extension
+
+There are a variety of opportunities to extend the functionality of this accelerator. Some of these include:
+
+ * Including an in-house legal team eSignature signing step, rather than using a pre-signed template
+ * Catering for customer-specific clauses in the agreement
+ * Including an internal approval step, potentially using the [Approvals Connector](https://learn.microsoft.com/en-us/connectors/approvals/)
+ * Integration with 3rd-party contract management systems
+ * Using Generative AI to summarize agreement content, or compare content between a standard vs proposed agreement
+ * and more
 
 ## Additional resources
 

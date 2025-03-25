@@ -1,0 +1,95 @@
+{
+    type: "AdaptiveCard",
+    body: [
+        {
+            type: "Container",
+            items: ForAll(Topic.NDATable,
+        {
+          type: "Container",
+                    separator: true,
+                    items: [            
+                {
+                    type: "ColumnSet",
+                    columns: [
+                        {
+                            type: "Column",
+                            items: [
+                                {
+                                    type: "Image",
+                                    url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHkSURBVHgB7ZlPSwJBHIbfNSnsECoEhoFSQichL169evW6Vz9BX8DP0MF7N6/WzWtXLwVCJ4OClg6CClESWNu8WxuruOIOM7IL+8Dgn0V5dua378zuGBC8TuxiErgSb89FSyN8XM+Bi6OM8WT8yd4hnKJepkK6kkjYuET4ZUmaVWCMJraN6DBNIFqkoyaMWFg3sbBuYmHdJCFJvz9Ct/uM2Wy+8ngqlUStlkO9fgyVSAv3ei/IZndRLud8j7MRldLSwuPxpyPiJ/N7QnvKpaWFN6FaPXReVUprFSaupCpp7cLEK80ycXteBm3CTInBYLzwXbmcFS2DTufRSRnKN5tnyOf3N/1bfTncaBRE5H39pwXlTfPEiULKEl64lA+Cth7msC8PvduzXizrHUHY2ky3SpZwcgnCVoT9ZDkCjUYRQdAuvE7WNE8RFK3CqmWJNmGK+pdBAbJoE17OYOLKttsPkEVJrLEnmalehsO3hc9uGTCTLesDsigRpsSyMOFsVyodOC1ofPmhRLjVqmBbSAuvWitsAn/DNYQs0s/WWLd+pbAOnigvPNkVW9QeBsa3+dqJhXUTC+smksJTRAgK3yMifNu4MSZiY3EegY1FQ1TCDjcWM2I7VKyAKrRHCKGoWDzcUpauPxkfxGDqOrBxAAAAAElFTkSuQmCC",
+                                    altText: name,
+                                    size: "Small",
+                                    width: "44px",
+                                    height: "44px"
+                                }
+                            ],
+                            width: "44px"
+                        },
+                        {
+                            type: "Column",
+                            items: [
+                                {
+                                    type: "TextBlock",
+                                    weight: "Bolder",
+                                    text: name,
+                                    wrap: true,
+                                    size: "Default"
+                                },
+                                {
+                                    type: "TextBlock",
+                                    spacing: "None",
+                                    text: statuscode,
+                                    isSubtle: false,
+                                    wrap: true,
+                                    color: Switch( statuscode, "In Progress", "Accent", "Executed", "Good", "Pending Signature", "Warning", "Expired", "Attention", "Default")
+                                }
+                            ],
+                            width: "stretch"
+                        }
+                    ]
+                },
+                {
+                    type: "TextBlock",
+                    text: "This document was " & Switch( statuscode, "Executed", "executed" & If(Not(IsBlank(cto_dateactive))," on " & cto_dateactive), "Expired", "executed" & If(Not(IsBlank(cto_dateactive))," on " & cto_dateactive), "initiated"  & If(Not(IsBlank(createdon))," on " & createdon)) & " by Adatum Inc.",
+                    wrap: true
+                },
+                {
+                    type: "TextBlock",
+                    text: "**Deal Owner:** " & dealowner,
+                    wrap: true
+                },
+                {
+                    type: "TextBlock",
+                    text: "**NDA Type:** " & type,
+                    wrap: true,
+                    spacing: "None"
+                },
+                {
+                    type: "TextBlock",
+                    text: "**Contract ID:** " & agreementnumber,
+                    wrap: true,
+                    spacing: "None"
+                },
+                If(Not(IsBlank(cto_ndadocumentlink)),{
+                    type: "ActionSet",
+                    actions: [
+                        {
+                            type: "Action.OpenUrl",
+                            title: "View",
+                            id: id,
+                            url: cto_ndadocumentlink,
+                            style: "positive"
+                        }
+                    ],
+                    horizontalAlignment: "Left"
+                }
+                )
+            ]
+            
+        }
+            )
+        }
+    ],
+    '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+    version: "1.5"
+}

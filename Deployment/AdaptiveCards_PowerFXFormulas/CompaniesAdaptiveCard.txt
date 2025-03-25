@@ -1,0 +1,73 @@
+{
+    type: "AdaptiveCard",
+    body: [
+        {
+            type: "Container",
+            items: ForAll(Topic.AccountsTable,
+        {
+          type: "Container",
+                    separator: true,
+                    items: [            
+                {
+                    type: "ColumnSet",
+                    columns: [
+                        {
+                            type: "Column",
+                            items: [
+                                {
+                                    type: "Image",
+                                    url: If(Not(IsBlank(entityimage)),"data:image/png;base64," & entityimage,"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGWSURBVHgB7ZmxSsNAGMf/FwNSB0kLDlIHwYKTYJY+Q5+ha1+gDl079Al8geKWWbeubtKlroKCg8Gh0GRREIrxvmDkjCTGSw5z9H4QLqEt/PLdv8mXHAPnOYgObeCC757yzUH9uFwDZ/tN9sg+ZReop6hIyKVdy4pwjvrLEg6lgC2DKII+hBb0wtFNGEZYNUZYNUZYNTYk8P1XeN59PGbRam1jMDhGu72DKpG6000mi3jsdvcyvzOfL9Fo2BiNTlAlUhVerd7Q6x3EWx6z2ROqRkpYJKn2eOzGYzouw+HNj9+UiUvlf7rp9C432wTNkOc9QIbSFU4qK8oUwfdfIEPpClMkklikoZNJTkjcL8NmXIdF8qomVj5rFv6KiYRqTCRETCRgIqGe0hXOg5qcfv/o65j6h6K37iyURoKEO53db8f/Jky9rop+9zekhGmai1SKKipCTyhJxdOfFUW3l4HmMV85Rlg1Rlg1WgqH0AgSvoUmvEe4YgFfWFxrsLDIeBK2aGGxyZdDeUPhkj1qCIny5uGaZMn1A2OroomnMyi4AAAAAElFTkSuQmCC"),
+                                    altText: name,
+                                    size: "Small",
+                                    width: "44px",
+                                    height: "44px"
+                                }
+                            ],
+                            width: "44px"
+                        },
+                        {
+                            type: "Column",
+                            items: [
+                                {
+                                    type: "TextBlock",
+                                    weight: "Bolder",
+                                    text: name,
+                                    wrap: true,
+                                    size: "Default"
+                                }
+                            ],
+                            width: "stretch", verticalContentAlignment: "Center"
+                        }
+                    ]
+                },
+                If(Not(IsBlank(description)),{
+                    type: "TextBlock",
+                    text: description,
+                    wrap: true, maxLines: 4
+                })
+                ,{
+                  type: "ActionSet",
+                  actions: [
+                    {
+                      type: "Action.Submit",
+                      title: "Confirm",
+                      id: id, style: "Positive",
+                      data: {
+                        CompanyID: id
+                      }
+                    }
+              ],
+              backgroundImage: {
+                verticalAlignment: "Center",
+                horizontalAlignment: "Center"
+              }
+            }
+            ]
+            
+        }
+            )
+        }
+    ],
+    '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+    version: "1.5"
+}

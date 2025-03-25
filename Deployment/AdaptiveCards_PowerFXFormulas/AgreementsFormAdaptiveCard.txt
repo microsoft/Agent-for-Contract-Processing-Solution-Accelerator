@@ -1,0 +1,152 @@
+{
+  '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+  type: "AdaptiveCard",
+  version: "1.5",
+  body: [
+    {
+      type: "ColumnSet",
+      columns: [
+        {
+          type: "Column",
+          width: "auto",
+          items: [
+            {
+              type: "TextBlock",
+              text: "Please fill out the following form",
+              weight: "bolder",
+              size: "medium"
+            }
+          ]
+        },
+        {
+          type: "Column",
+          width: "auto",
+          items: [
+            {
+              type: "Image",
+              url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMTSURBVHgBzVjtlZswEFx4+R93EFLBORWE64BUcFDBXSqwXYHjCiAVxB0EV3BOB7iCkAbszMAK6zDYfPiRzHtYwtpdDStptZIjPRGGoYciwPOAx3ccZ4Zyps356XTKUPLZ4dkmSZJJDzhdBUEkRPEEAr70AAjuUWxALOkif5MQeNALMapeQ/MBT66PAT03a5DNQG51i5hzhQiNLkDmpda0g+FEyuHIW3Q9KYczRPnZboPuNxSrNl2nzSCM/UB1Xgk6zvZ4PH7tOyfU1hLVJ+tveuuxyZbTYuCnnIeIyhGUUxkBzkHYXdTsXpByakozKL3eUhpBqv6xe7VfDZ9b06l/wad7kSFoizalDAvEXPusUHlIXRpbZB7vScZG3VPaV8r6u4pZOb6iAquuZGB8rsYZFL9Ab39Lh7ahF6meqCM+su6q0dCwRWPSNYgp1lLGHbOaOoEe4crVV085lITQ8GwEsbRX0g8HU4Gd39IDDCOWbhEWXA1iJt7sBswbBs4NDK7sDrpA+0r11ScXzqHACGgE7gVdsi8yEOjzu7U/Bhwy32pPZXpsrfqDC3Yf9CUfuszh6gWeWAZAPVzMQ3qKHvK07ZcMAIgEXF3cSM1KGQCzGGYkNJNxGKvPeZTbhP4rkJBh917+PXIS+qMvo10/FJh/Jg5mLsYv1RdPs8RJoYHZ9Hugh+zNMJDp4ZsKnUNCVWAy+8nEsPvcuk37iUwEzYt8fd2TS7HsuZ8YIdd11zIdlqYCDpuif/5o/pNpQ8CzmAxD3lVQM1QzXJnJwVyLYWTqzOB6DB3nILcdHp1vZotKxqtnqFXftmAURTzEmWTt4kRwDzScbDZxHFfpy5utAwSWcv5K5sqv95zkLWe+pS3zhhC9wURdzseUwsCIXdwm4yuZuUXmYgSuHaXtLzHZZOfTiG0LxRr27KC71xNKVpe/etmgp4hn+3/dahgm0jZyugWRQNP1zYbD1OuyoWa8fia3kev9j0FxeQX5JtlOdwS9Lqz0auZB+qG4vrnbhVUDMQ9FoEPBOnPy6kpPynQmVc/1vtL7CzR3m7oZjou1AAAAAElFTkSuQmCC",
+              width: "25px",
+              altText: "This is my alternate text",
+              selectAction: {
+                type: "Action.ToggleVisibility",
+                targetElements: [
+                  "helpSecondPartyAddress",
+                  "helpSecondPartySignatoryName",
+                  "helpSecondPartySignatoryTitle",
+                  "helpSecondPartySignatoryEmail",
+                  "helpYourOrganizationContactName"
+                ]
+              }
+            }
+          ],verticalContentAlignment: "Center"
+        }
+      ]
+    },
+    {
+      type: "TextBlock",
+      text: "Second Party: **" & Topic.AccountRecord.name & "**",
+      wrap: true
+    },
+    {
+      type: "Input.Text",
+      id: "SecondPartyAddress",
+      placeholder: "Enter the second party's address",
+      label: "Second Party Address",
+      errorMessage: "Please enter a value for this field",
+      isRequired: true,
+      value: Topic.SecondPartyAddress
+    },
+    {
+      type: "TextBlock",
+      text: "This is the legal entity's street address for the agreement.",
+      wrap: true,
+      isSubtle: true,
+      size: "Small",
+      isVisible: false,
+      id: "helpSecondPartyAddress"
+    },
+    {
+      type: "Input.Text",
+      id: "SecondPartySignatoryName",
+      placeholder: "Enter the second party's signatory name",
+      label: "Second Party Signatory Name",
+      errorMessage: "Please enter a value for this field",
+      isRequired: true,
+      value: Topic.SecondPartySignatoryName
+    },
+    {
+      type: "TextBlock",
+      text: "This is the full name of the person signing for the second party.",
+      wrap: true,
+      isSubtle: true,
+      size: "Small",
+      isVisible: false,
+      id: "helpSecondPartySignatoryName"
+    },
+    {
+      type: "Input.Text",
+      id: "SecondPartySignatoryTitle",
+      placeholder: "Enter the second party's signatory title",
+      label: "Second Party Signatory Title",
+      errorMessage: "Please enter a value for this field",
+      isRequired: true,
+      value: Topic.SecondPartySignatoryTitle
+    },
+    {
+      type: "TextBlock",
+      text: "This is the job title of the person signing for the second party (e.g., Chief Financial Officer).",
+      wrap: true,
+      isSubtle: true,
+      size: "Small",
+      isVisible: false,
+      id: "helpSecondPartySignatoryTitle"
+    },
+    {
+      type: "Input.Text",
+      id: "SecondPartySignatoryEmail",
+      placeholder: "Enter the second party's signatory email",
+      label: "Second Party Signatory Email",
+      regex: "^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$",
+      errorMessage: "Please enter a valid email address",
+      isRequired: true,
+      value: Topic.SecondPartySignatoryEmail
+    },
+    {
+      type: "TextBlock",
+      text: "This is the email address for sending the signing request.",
+      wrap: true,
+      isSubtle: true,
+      size: "Small",
+      isVisible: false,
+      id: "helpSecondPartySignatoryEmail"
+    },
+    {
+      type: "Input.Text",
+      id: "YourOrganizationContactName",
+      placeholder: "Enter your organization's contact name",
+      label: "Your Organization Contact Name",
+      errorMessage: "Please enter a value for this field",
+      isRequired: true,
+      value: Topic.YourOrganizationContactName
+    },
+    {
+      type: "TextBlock",
+      text: "This is the contact person for your organization in the agreement.",
+      wrap: true,
+      isSubtle: true,
+      size: "Small",
+      isVisible: false,
+      id: "helpYourOrganizationContactName"
+    }
+  ],
+  actions: [
+    {
+      type: "Action.Submit",
+      title: "Submit",
+      data: {
+        SecondPartyName: Topic.AccountRecord.name
+      },
+      style: "positive"
+    }
+  ]
+}

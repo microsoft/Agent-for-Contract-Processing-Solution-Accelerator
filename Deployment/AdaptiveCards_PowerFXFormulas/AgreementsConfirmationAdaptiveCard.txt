@@ -1,0 +1,53 @@
+{
+  type: "AdaptiveCard",
+  '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+  version: "1.5",
+  body: [
+    {
+      type: "TextBlock",
+      text: "You've entered:",
+      wrap: true,
+      style: "default"
+    },
+    {
+      type: "FactSet",
+      facts: [
+        {
+          title: "Second Party Address",
+          value: Topic.SecondPartyAddress
+        },
+        {
+          title: "Second Party Signatory Name",
+          value: Topic.SecondPartySignatoryName
+        },
+        {
+          title: "Second Party Signatory Title",
+          value: Topic.SecondPartySignatoryTitle
+        },
+        {
+          title: "Second Party Signatory Email",
+          value: Topic.SecondPartySignatoryEmail
+        },
+        {
+          title: "Your Organization Contact Name",
+          value: Topic.YourOrganizationContactName
+        }
+      ],
+      spacing: "Medium"
+    },
+    {
+      type: "ActionSet",
+      actions: [
+        {
+          type: "Action.Submit",
+          title: "Edit"
+        },
+        {
+          type: "Action.Submit",
+          title: "Proceed",
+          style: "positive"
+        }
+      ]
+    }
+  ]
+}
