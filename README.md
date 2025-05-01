@@ -228,8 +228,6 @@ Check out similar solution accelerators
 
 ## Provide feedback
 
-{🟨TODO: Update link to create new issues for this repo}
-
 Have questions, find a bug, or want to request a feature? [Submit a new issue](https://github.com/microsoft/Agent-for-Contract-Processing-Solution-Accelerator/issues/new/choose) on this repo and we'll connect.
 
 <br/>
