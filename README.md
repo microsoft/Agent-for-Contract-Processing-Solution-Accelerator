@@ -95,57 +95,29 @@ Please click this [**Link to Deployment Guide**](Deployment/README.md) for instr
 
 [**Usage Guidance**](Deployment/Data/USAGE_GUIDANCE.md) has been provided to assist you in executing the steps required to see the included capabilities of this accelerator in action..
 
-{🟨TODO: Fill in table with deployment specific links}
-
-| [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/microsoft/content-processing-solution-accelerator) | [![Open in Dev Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/content-processing-solution-accelerator) | 
-|---|---|
-
 <br/>
 
-{🟨TODO: Remove if Azure OpenAI quota check is not required }
+### Prerequisites and Costs
 
-> ⚠️ **Important: Check Azure OpenAI Quota Availability - do not have content**
- <br/>To ensure sufficient quota is available in your subscription, please follow [quota check instructions guide](./docs/QuotaCheck.md) before you deploy the solution.
+To deploy this solution accelerator, ensure you have access to the following
 
-<br/>
-
-### Prerequisites and Costs - do not have content
-{🟨TODO: Update with solution specific notes like role requirements}
-
-To deploy this solution accelerator, ensure you have access to an [Azure subscription](https://azure.microsoft.com/free/) with the necessary permissions to create **resource groups, resources, app registrations, and assign roles at the resource group level**. This should include Contributor role at the subscription level and  Role Based Access Control role on the subscription and/or resource group level. Follow the steps in [Azure Account Set Up](./docs/AzureAccountSetUp.md).
-
-Here are some example regions where the services are available: {🟨TODO: Update with suggested regions specific to this solution}
-
-Check the [Azure Products by Region](https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/?products=all&regions=all) page and select a **region** where the following services are available.
-
-{🟨TODO: Call out specific pricing "gotchas" like Azure Container Registry if known}
-
-Pricing varies per region and usage, so it isn't possible to predict exact costs for your usage. The majority of the Azure resources used in this infrastructure are on usage-based pricing tiers. However, Azure Container Registry has a fixed cost per registry per day.
-
-{🟨TODO: Update with solution specific estimate sheet}
-
-Use the [Azure pricing calculator](https://azure.microsoft.com/en-us/pricing/calculator) to calculate the cost of this solution in your subscription. 
-
-Review a [sample pricing sheet](https://azure.com/e/68b51f4cb79a4466b631a11aa57e9c16) in the event you want to customize and scale usage.
-
-_Note: This is not meant to outline all costs as selected SKUs, scaled use, customizations, and integrations into your own tenant can affect the total consumption of this sample solution. The sample pricing sheet is meant to give you a starting point to customize the estimate for your specific needs._
+- [Microsoft Power Platform license](https://learn.microsoft.com/en-us/power-platform/admin/pricing-billing-skus) with Dataverse enabled and System Administrator access.
+- [Copilot Studio license](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing).
+- End users having Dataverse access.
+- [Docusign license](https://ecom.docusign.com/plans-and-pricing/esignature).
+- Access to create a SharePoint site through appropriate [Microsoft 365 license](https://www.microsoft.com/en-us/Licensing/product-licensing/microsoft-365) .
 
 <br/>
-
-{🟨TODO: Update with all products, decription of product use, and product specific pricing links}
 
 | Product | Description | Cost |
 |---|---|---|
-| [Product Name with Link to Learn content](https://learn.microsoft.com) | Decription of how the product is used | [Pricing]() |
-| [Product Name with Link to Learn content](https://learn.microsoft.com) | Decription of how the product is used | [Pricing]() |
-| [Product Name with Link to Learn content](https://learn.microsoft.com) | Decription of how the product is used | [Pricing]() |
-| [Product Name with Link to Learn content](https://learn.microsoft.com) | Decription of how the product is used | [Pricing]() |
+| [Microsoft Power platform](https://learn.microsoft.com/en-us/power-platform/) | Decription of how the product is used | [Pricing](https://www.microsoft.com/en-us/power-platform/pricing/) |
+| [Microsoft copilot studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/) | Microsoft Copilot Studio is a graphical, low-code tool designed for building AI-driven agents and agent flows. | [Pricing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing) |
+| [Docusign](https://www.docusign.com/products/electronic-signature) | DocuSign eSignature is a leading electronic signature solution that allows users to sign documents securely and efficiently from virtually any device. | [Pricing](https://ecom.docusign.com/plans-and-pricing/esignature) |
+| [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/products-apps-services) | Microsoft 365 is a cloud-powered productivity platform that includes a suite of applications and services designed to enhance productivity and collaboration. | [Pricing](https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products) |
 
 
 <br/>
-
->⚠️ **Important:** To avoid unnecessary costs, remember to take down your app if it's no longer in use,
-either by deleting the resource group in the Portal or running `azd down`.
 
 <br /><br />
 <h2><img src="./Deployment/Images/business-scenario.png" width="48" />
@@ -186,45 +158,39 @@ Supporting documentation
 1. [Microsoft Power Platform](https://learn.microsoft.com/en-us/power-platform/)
 2. [Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/)
 
-### Security guidelines - do not have content
+### Security guidelines
 
-{🟨TODO: Fill in with solution specific security guidelines similar to the below}
+You may want to ensure that you configure any Copilot Studio actions, and any Connections used in Power automate flows, to use the authentication that is appropriate for your organization and scenario.
 
-This template uses Azure Key Vault to store all connections to communicate between resources.
+Depending on your desired security model, you may wish to select user authentication for actions rather than agent author authentication. For power automate flows, you may wish to configure connections to use the credentials of run-only users, or with a specific connection that you create.
 
-This template also uses [Managed Identity](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview) for local development and deployment.
+Please note that this solution leverages a custom Dataverse table called 'NDA Agreements' which stores metadata related to the generated NDA document. Creation of a security role to manage Account, Contact and NDA agreement table access for end users is recommended based on organizational best practices and needs.
 
-To ensure continued best practices in your own repository, we recommend that anyone creating solutions based on our templates ensure that the [Github secret scanning](https://docs.github.com/code-security/secret-scanning/about-secret-scanning) setting is enabled.
+Also note that this solution leverages a SharePoint site and document library for the storage of unsigned, signed, and template NDA Agreements. Ensure that the security settings for your site and library are managed in accordance with your organizational best practices and needs. See [Managing SharePoint Online Security](https://learn.microsoft.com/en-us/microsoft-365/community/sharepoint-security-a-team-effort) for more details.
 
-You may want to consider additional security measures, such as:
+See these resources for more details on setting up authentication:
 
-* Enabling Microsoft Defender for Cloud to [secure your Azure resources](https://learn.microsoft.com/azure/security-center/defender-for-cloud).
-* Protecting the Azure Container Apps instance with a [firewall](https://learn.microsoft.com/azure/container-apps/waf-app-gateway) and/or [Virtual Network](https://learn.microsoft.com/azure/container-apps/networking?tabs=workload-profiles-env%2Cazure-cli).
-
-<br/>
-
-### Frequently asked questions - do not have content
-
-{🟨TODO: Remove this section if you don't have FAQs}
-
-[Click here](./docs/FAQs.md) to learn more about common questions about this solution.
+* [Configure user authentication for actions](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication)
+* [Manage owners and users in your flows with Power automate](https://learn.microsoft.com/en-us/sharepoint/dev/business-apps/power-automate/guidance/manage-list-flows)
+* [Managing SharePoint Online Security](https://learn.microsoft.com/en-us/microsoft-365/community/sharepoint-security-a-team-effort)
 
 <br/>
 
-### Cross references - do not have content
+### Frequently asked questions
+
+[Click here](./FAQs.md) to learn more about common questions about this solution.
+
+<br/>
+
+### Cross references
 Check out similar solution accelerators
  
-{🟨TODO: Identify related accelerators - fill in the name and a one sentence description. The name should have non-breaking spaces in them to make sure the layout doesn't break.}
-
 | Solution Accelerator | Description |
 |---|---|
-| [Document&nbsp;knowledge&nbsp;mining](https://github.com/microsoft/Document-Knowledge-Mining-Solution-Accelerator) | Provides REST API access to OpenAI's powerful language models including o3-mini, o1, o1-mini, GPT-4o, GPT-4o mini |
-| [Conversation&nbsp;knowledge&nbsp;mining](https://github.com/microsoft/Conversation-Knowledge-Mining-Solution-Accelerator) | Description of solution accelerator |
-| [Document&nbsp;generation](https://github.com/microsoft/document-generation-solution-accelerator) | Analyzes various media content—such as audio, video, text, and images—transforming it into structured, searchable data |
-
+| [Agent for HR services](https://github.com/microsoft/agent-for-hr-service-solution-accelerator) | This solution streamlines HR service workflows with an AI-powered assistant that delivers instant answers, automates record updates, and provides intelligent support, saving time and elevating the employee experience. |
+| [Agent for RFP response](https://github.com/microsoft/Conversation-Knowledge-Mining-Solution-Accelerator) | The Agent for RFP response processes RFP documents and leverages its knowledge base to create a draft proposal posted autonomously in Microsoft Teams. |
 
 <br/>   
-
 
 ## Provide feedback
 
