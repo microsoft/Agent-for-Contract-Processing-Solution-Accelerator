@@ -111,7 +111,7 @@ To deploy this solution accelerator, ensure you have access to the following
 
 | Product | Description | Cost |
 |---|---|---|
-| [Microsoft Power platform](https://learn.microsoft.com/en-us/power-platform/) | Decription of how the product is used | [Pricing](https://www.microsoft.com/en-us/power-platform/pricing/) |
+| [Microsoft Power platform](https://learn.microsoft.com/en-us/power-platform/) |  Microsoft Power Platform is a suite of applications, connectors, and a data platform (Dataverse) that provides a rapid application development environment to build custom apps, automate workflows, and analyze data. | [Pricing](https://www.microsoft.com/en-us/power-platform/pricing/) |
 | [Microsoft copilot studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/) | Microsoft Copilot Studio is a graphical, low-code tool designed for building AI-driven agents and agent flows. | [Pricing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing) |
 | [Docusign](https://www.docusign.com/products/electronic-signature) | DocuSign eSignature is a leading electronic signature solution that allows users to sign documents securely and efficiently from virtually any device. | [Pricing](https://ecom.docusign.com/plans-and-pricing/esignature) |
 | [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/products-apps-services) | Microsoft 365 is a cloud-powered productivity platform that includes a suite of applications and services designed to enhance productivity and collaboration. | [Pricing](https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products) |
