@@ -40,8 +40,7 @@ There are a variety of opportunities to extend the functionality of this acceler
  * Catering for customer-specific clauses in the agreement
  * Including an internal approval step, potentially using the [Approvals Connector](https://learn.microsoft.com/en-us/connectors/approvals/)
  * Integration with 3rd-party contract management systems
- * Using Generative AI to summarize agreement content, or compare content between a standard vs proposed agreement
- * and more
+ * Using Generative AI to summarize agreement content, or compare content between a standard vs proposed agreement and more
 
 ### Additional resources
 
@@ -69,13 +68,13 @@ Additional details on how these capabilities are leveraged in this accelerator c
   <summary>Click to learn more about the key features this solution enables</summary>
 
   - **Generate contracts** <br/>
-  Draft contracts from templates and existing knowledge base to outline right terms and conditions to never start from scratch.​
+  Draft contracts from templates on a self-serve basis, without requiring legal counsel input.
   
   - **Search and summarize** <br/>
-  Find existing contracts, extract entries and clauses through records and review contracts to save time.
+  Find existing contracts with organizations, avoiding contract duplication, saving time and effort.
 
   - **Automate processes** <br/>
-  Automate routine tasks such as review and approval, obtaining signatures, as well as enable seamless collaboration across organization.
+  Automate routine tasks such as review and approval, obtaining signatures, and enabling seamless collaboration across the organization.
 
   - **Extend and integrate** <br/>
   Enhance user experience by enabling integration and extensibility with relevant third-party corporate systems such as DocuSign.​
@@ -101,19 +100,18 @@ Please click this [**Link to Deployment Guide**](Deployment/README.md) for instr
 
 To deploy this solution accelerator, ensure you have access to the following
 
-- [Microsoft Power Platform license](https://learn.microsoft.com/en-us/power-platform/admin/pricing-billing-skus) with Dataverse enabled and System Administrator access.
-- [Copilot Studio license](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing).
-- End users having Dataverse access.
-- [Docusign license](https://ecom.docusign.com/plans-and-pricing/esignature).
-- Access to create a SharePoint site through appropriate [Microsoft 365 license](https://www.microsoft.com/en-us/Licensing/product-licensing/microsoft-365) .
+- [Microsoft Power Platform license](https://learn.microsoft.com/en-us/power-platform/admin/pricing-billing-skus) with Dataverse enabled and System Administrator access
+- [Copilot Studio license](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing)
+- End users having Dataverse access
+- [Docusign license](https://ecom.docusign.com/plans-and-pricing/esignature)
+- Access to create a SharePoint site through appropriate [Microsoft 365 license](https://www.microsoft.com/en-us/Licensing/product-licensing/microsoft-365)
 
 <br/>
 
 | Product | Description | Cost |
 |---|---|---|
 | [Microsoft Power platform](https://learn.microsoft.com/en-us/power-platform/) |  Microsoft Power Platform is a suite of applications, connectors, and a data platform (Dataverse) that provides a rapid application development environment to build custom apps, automate workflows, and analyze data. | [Pricing](https://www.microsoft.com/en-us/power-platform/pricing/) |
-| [Microsoft copilot studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/) | Microsoft Copilot Studio is a graphical, low-code tool designed for building AI-driven agents and agent flows. | [Pricing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing) |
-| [Docusign](https://www.docusign.com/products/electronic-signature) | DocuSign eSignature is a leading electronic signature solution that allows users to sign documents securely and efficiently from virtually any device. | [Pricing](https://ecom.docusign.com/plans-and-pricing/esignature) |
+| [Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/) | Microsoft Copilot Studio is a graphical, low-code tool designed for building AI-driven agents and agent flows. | [Pricing](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing) |
 | [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/products-apps-services) | Microsoft 365 is a cloud-powered productivity platform that includes a suite of applications and services designed to enhance productivity and collaboration. | [Pricing](https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products) |
 
 
