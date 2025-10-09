@@ -1,3 +1,9 @@
+<hr>
+<h3 align="center">
+     <b>⚠️ This repository is no longer maintained ⚠️</b>
+</h3>
+<hr>
+
 # Agent for Contract Processing
 
 This solution streamlines contract management by creating, finding, managing and sharing contracts which lead to saving time and resources by automating contract processing workflows. The solution leverages Copilot Studio, Dataverse, Power Automate, SharePoint, Microsoft Teams and a 3rd party e-signature connector.
